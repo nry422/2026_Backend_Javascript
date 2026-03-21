@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch case 02</title>
+</head>
+
+<body>
+    <script>
+        const velocidadeperm = Number(prompt("Velocidade permitida: "));
+        const velocidade = Number(prompt("Velocidade aferida: "));
+        let alerta;
+
+
+        switch (true) {
+            case (velocidade <= velocidadeperm):
+                alerta = "permitida";
+                break;
+
+            case (velocidade <= velocidadeperm * 1.2):
+                alerta = "acima da permitida, menor que 20%, multa leve";
+                break;
+            default:
+                alerta = "muito acima, mais de 20%, multa grave";
+
+
+        }
+
+
+        alert(`Velocidade ${alerta}`);
+    </script>
+
+
+</body>
+
+</html>

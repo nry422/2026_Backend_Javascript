@@ -1,0 +1,22 @@
+<script>
+
+    const nomefruta = prompt("Nome da fruta ");
+    const vezes = Number(prompt("Repetir quantas vezes: "));
+    let i = vezes;
+    let resultado = "";
+
+    while (i > 0) {
+
+        resultado = resultado + nomefruta;
+
+        if (i > 1) {
+            resultado = resultado + " * ";
+        }
+
+        i--;
+    }
+
+    alert(resultado);
+
+
+</script>

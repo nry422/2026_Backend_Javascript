@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 03</title>
+</head>
+
+<body>
+    <script>
+        let valormoeda = prompt("Valor das moedas");
+        valormoeda = valormoeda.replace(",", ".");
+        let valor = parseFloat(valormoeda);
+
+        let troco = 0;
+        let periodo;
+
+        if (valor >= 1.00 && valor < 1.75) {
+
+            periodo = "Periodo pago 30 minutos";
+
+            if (valor - 1.00 != 0) {
+                troco = valor - 1.00;
+
+            }
+
+        } else if (valor >= 1.75 && valor < 3.00) {
+
+            periodo = "Periodo pago 60 minutos";
+
+            if (valor - 1.75 != 0) {
+                troco = valor - 1.75;
+
+            }
+        } else if (valor >= 3.00) {
+
+            periodo = "Periodo pago 120 minutos";
+
+            if (valor - 3.00 != 0) {
+                troco = valor - 3.00;
+
+            }
+        }
+        else {
+
+            periodo = "Valor invalido";
+        }
+
+        if (troco != 0) {
+            alert(`${periodo}, troco ${troco.toFixed(2)}.`);
+        } else {
+            alert(`${periodo}`);
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

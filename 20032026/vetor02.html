@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor 02</title>
+</head>
+<body>
+
+    <script>
+        const cidades = ["Guaramirim"]; // declara e define conteúdo inicial do vetor
+        cidades.push("Joinville"); // adiciona cidade ao final do vetor
+        console.log(cidades); // ['Guaramirim', 'Joinville']
+        cidades.unshift("Blumenau"); // adiciona ao início e desloca as demais
+        console.log(cidades); // ['Blumenau', 'Guaramirim', 'Joinville']
+        const ultima = cidades.pop(); // remove a última cidade do vetor
+        console.log(cidades); // ['Blumenau', 'Guaramirim']
+        const primeira = cidades.shift(); // remove a primeira e "sobe" as demais
+        console.log(cidades); // ['Guaramirim']
+        </script>
+
+
+    
+</body>
+</html>
