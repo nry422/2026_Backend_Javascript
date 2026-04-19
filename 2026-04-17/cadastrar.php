@@ -14,7 +14,7 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <p class="lead text-center">Usuario nao encontrado,
-          por favor cadastre-se para obter acesso!!
+          por favor cadastre-se para obter acesso, ou tente o login novamente!
         </p>
 
 
@@ -39,6 +39,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary">Cadastrar</button>
+          <a href="login.php" type="button" class="btn btn-primary" id="paglogin">Login</a>
       </div>
 
       </form>
@@ -51,6 +52,11 @@
           const email = document.getElementById("cadastraremail").value;
           const senha = document.getElementById("criarsenha").value;
           const senha2 = document.getElementById("confirmasenha").value;
+
+          if (!email || !senha) {
+              alert("Preencha os campos!");  
+              return;}
+
 
 
           if (senha == senha2) {

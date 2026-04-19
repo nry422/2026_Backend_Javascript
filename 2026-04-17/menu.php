@@ -1,11 +1,4 @@
-<script>
-    const email = localStorage.getItem("email");
-    const senha = localStorage.getItem("senha");
-    if (email == null || senhasalvo == null) {
-        alert("Você não logou")
-        window.location.href = "index.php"
-    }
-</script>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area Restrita!</title>
     <link href="./css/bootstrap.css" rel="stylesheet">
+    <script>
+    if (sessionStorage.getItem("signed") == null) {
+        alert("Você não logou")
+        window.location.href = "index.php";    
+    }
+</script>
 </head>
 
 <body>
@@ -41,7 +40,7 @@
 
         botao.addEventListener("click", (e) => {
             e.preventDefault();
-            localStorage.clear();
+            sessionStorage.clear();
 
             window.location.href = "index.php";
         });

@@ -34,9 +34,11 @@
           </div>
 
           <button type="submit" class="btn btn-primary">Login</button>
+        </form>
       </div>
+    </div>   
 
-      </form>
+         
 
       <script>
         const frm = document.querySelector("form");
@@ -48,12 +50,13 @@
 
           const emailsalvo = localStorage.getItem("email");
           const senhasalvo = localStorage.getItem("senha");
-
-          window.location.href = "login.php";
+          
 
           if (email == emailsalvo && senha == senhasalvo) { //ve se tem salvo o que foi colocado e manda pro menu
+            sessionStorage.setItem("signed", true);
             window.location.href = "menu.php"
           } else {
+            alert("Usuário não econtrado!")
             window.location.href = "cadastrar.php" //manda pro cadastro para criar
           }
         });
