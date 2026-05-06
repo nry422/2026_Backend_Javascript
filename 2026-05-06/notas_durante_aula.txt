@@ -45,3 +45,10 @@ pag 25-28 apenas observar
 
 exemplo07 pag 29 foreach
 
+pag 30 apenas comentario
+
+funcao.php pag 32-33 
+
+
+exercicio
+
