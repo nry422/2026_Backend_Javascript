@@ -20,8 +20,8 @@
             </select>
         </p>
         <p>
-            <input type="submit" value="enviar" /><input type="reset"
-                    value="limpar" />
+            <input type="submit" value="enviar" />
+            <input type="reset"  value="limpar" />
         </p>
     </form>
     
